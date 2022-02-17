@@ -1,14 +1,18 @@
+// get inputValue 
 function getInputValue(inputId){
     const indputFild = document.getElementById(inputId)
     const inputText = indputFild.value;
     if(inputText > 0){
-        inputValue = parseFloat(inputText);
+        inputValue = parseInt(inputText);
         return inputValue;
     }
 }
-function calculatemoney(){
-    
+// set total value in html 
+function updateHtml(elementId, setvalue){
+    document.getElementById(elementId).innerText = setvalue;
 }
+
+// calculat expenses part 
 document.getElementById('calculateButton').addEventListener('click',function(){
     const income = getInputValue('incomeFild');
     const food = getInputValue('foodFild');
@@ -30,11 +34,34 @@ document.getElementById('calculateButton').addEventListener('click',function(){
     const totalExpenses = food + rent + clothes;
     const balance = income - totalExpenses;
     if(income > totalExpenses){
-    document.getElementById('totalExpenses').innerText = totalExpenses;
-    document.getElementById('balance').innerText = balance;
+    // update on the html doc 
+    updateHtml('totalExpenses',totalExpenses)
+    updateHtml('balance',balance)
     }
     else{
         
+    }
+    }
+})
+
+document.getElementById('saveButton').addEventListener('click',function(){
+    const balanceText = document.getElementById('balance').innerText;
+    const balance = parseInt(balanceText)
+    const income = getInputValue('incomeFild');
+    const save = getInputValue('saveFild');
+    if(isNaN(save) || save < 0){
+        console.log('dkjfdkfjkdjf')
+    }
+    else{
+    const saveAmount =(save / 100) * income;
+    const remainingBalance = balance - saveAmount;
+    // update on the html doc 
+    if(saveAmount < balance){
+    updateHtml('savingAmount',saveAmount);
+    updateHtml('remainingBalance',remainingBalance)
+    }
+    else{
+
     }
     }
 })
