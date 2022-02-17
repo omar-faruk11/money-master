@@ -1,6 +1,18 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+/* document  */
+body{
+    font-family: 'Oswald',sans-serif;
+}
 .income-section{
     background-color: #F8F8F8;
 }
 .input-fild{
     background-color: #DCDCDC;
+}
+.text-color-purple {
+    color: rgb(147 51 234);
+}
+.bg-color-purple {
+    background: rgb(147 51 234);
 }

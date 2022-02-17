@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Calculate-master</title>
     <!-- bootstrap link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- css link  -->
     <link rel="stylesheet" href="stylesheet/style.css">
 </head>
+
 <body>
     <section class=" m-4">
-        <h2 class="text-center text-primary mb-4">Calculate Master</h2>
+        <div class="row">
+            <h2 class=" text-center text-color-purple mb-4">Calculate Master</h2>
+        </div>
         <div class="row">
             <div class="col-lg-7 col-sm-12">
-                <img src="pictures/money.svg" alt="" class=" img-fluid">
+                <img src="pictures/money.svg" alt="" class="img-fluid">
             </div>
             <div class="col-lg-5 col-sm-12 income-section">
                 <div class="row">
-                    <h4 class="mt-4 mb-3 text-center">Income</h4>
+                    <h4 class="mt-5 mb-3 text-center">Income</h4>
                 </div>
                 <div class="row mb-3">
                     <div class="col-2 offset-2">
-                        <p class=" pe-0 mt-1 ">Income:</p>
+                        <p class=" pe-0 mt-1 ms-lg-4 ms-0 ">Income:</p>
                     </div>
-                    <div class="col-5 ps-0">
-                        <input type="text" name="" id="" class="input-fild form-control border-0 rounded">
+                    <div class="col-5">
+                        <input type="text" name="" id="incomeFild" class="input-fild form-control border-0 rounded">
                     </div>
                 </div>
                 <div class="row mb-3">
-                <h4 class="mb-2 text-center">Expenses</h4>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-2 offset-2">
-                        <p class=" pe-0 mt-1 ">Food:</p>
-                    </div>
-                    <div class="col-5 ps-0">
-                        <input type="text" name="" id="" class="input-fild form-control border-0 rounded">
-                    </div>
+                    <h4 class="mb-2 text-center">Expenses</h4>
                 </div>
                 <div class="row mb-3">
                     <div class="col-2 offset-2">
-                        <p class=" pe-0 mt-1 ">Rent:</p>
+                        <p class=" pe-0 mt-1 ms-lg-4 ms-0 ">Food:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="text" name="" id="" class="input-fild form-control border-0 rounded">
+                        <input type="text" name="" id="foodFild" class="input-fild form-control border-0 rounded">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-2 offset-2">
-                        <p class=" pe-0 mt-1 ">Clothes:</p>
+                        <p class=" pe-0 mt-1 ms-lg-4 ms-0 ">Rent:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="text" name="" id="" class="input-fild form-control border-0 rounded">
+                        <input type="text" name="" id="rentFild" class="input-fild form-control border-0 rounded">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3 offset-lg-2 offset-1 col-lg-2">
+                        <p class=" mt-1 ms-lg-4 ms-3 ">Clothes:</p>
+                    </div>
+                    <div class="col-5 ps-0">
+                        <input type="text" name="" id="clothesFild" class="input-fild form-control border-0 rounded">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4 offset-4">
-                        <button class="btn btn-primary px-5">Calculate</button>
+                        <button id="calculateButton" class="btn text-white bg-color-purple px-5">Calculate</button>
                     </div>
                 </div>
                 <div class="row">
-                    <h5 class="mt-4 mb-3 text-center">Total Expenses: 5500 </h5>
-                    <h5 class="mt-2 mb-5 text-center">Balance: 4500</h5>
+                    <h5 class="mt-4 mb-3 text-center">Total Expenses: <span id="totalExpenses">00</span> </h5>
+                    <h5 class="mt-2 mb-5 text-center">Balance: <span id="balance">00</span></h5>
                 </div>
                 <div class="row">
-                    <div class="col-2 offset-1 pe-0">
+                    <div class="col-2 offset-1  pe-0">
                         <p class="mt-1 ">Save:</p>
                     </div>
-                    <div class="col-4 ps-0">
-                        <input type="text" name="" id="" class="w-100 input-fild form-control border-0 rounded">
+                    <div class="col-3 ps-0">
+                        <input type="text" name="" id="saveFild" class="w-100 input-fild form-control border-0 rounded">
                     </div>
                     <div class="col-1">
                         <p class="mt-1">%</p>
                     </div>
                     <div class="col-4">
-                        <button class=" btn btn-primary px-5">Save</button>
+                        <button id="saveButton" class=" btn text-white bg-color-purple w-100">Save</button>
                     </div>
                 </div>
                 <div class="row">
-                    <h5 class="mt-4 mb-3 text-center">Saving Amount: 2000 </h5>
-                    <h5 class="mt-2 mb-3 text-center">Remaining Balance: 2500 </h5>
+                    <h5 class="mt-4 mb-3 text-center">Saving Amount: <span id="savingAmount">00</span> </h5>
+                    <h5 class="mt-2 mb-3 text-center">Remaining Balance: <span id="remainingBalance">00</span> </h5>
                 </div>
             </div>
         </div>
@@ -89,4 +94,5 @@
     <!-- script link  -->
     <script src="javascript/index.js"></script>
 </body>
+
 </html>
