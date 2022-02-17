@@ -11,8 +11,6 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- css link  -->
     <link rel="stylesheet" href="stylesheet/style.css">
-    <!-- fontawesome link  -->
-    <script src="https://kit.fontawesome.com/ac09a770e3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,7 +32,8 @@
                         <p class=" pe-0 mt-1 ms-lg-4 ps-0 ">Income:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="number" name="" id="incomeFild" placeholder="Your Income" class="input-fild form-control border-0 rounded">
+                        <input type="number" name="" id="incomeFild" placeholder="Your Income"
+                            class="input-fild form-control border-0 rounded ms-lg-0 ms-4">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -42,10 +41,11 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-2 offset-2">
-                        <p class=" pe-0 mt-1 ms-lg-4 ms-0 ">Food:</p>
+                        <p class=" pe-0 mt-1 ms-lg-4  ms-0 ">Food:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="number" name="" id="foodFild" placeholder="Food cost" class="input-fild form-control border-0 rounded">
+                        <input type="number" name="" id="foodFild" placeholder="Food cost"
+                            class="input-fild form-control border-0 rounded ms-lg-0 ms-4">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -53,30 +53,35 @@
                         <p class=" pe-0 mt-1 ms-lg-4 ms-0 ">Rent:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="number" name="" id="rentFild" placeholder="rent cost" class="input-fild form-control border-0 rounded">
+                        <input type="number" name="" id="rentFild" placeholder="rent cost"
+                            class="input-fild form-control border-0 rounded ms-lg-0 ms-4">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-3 offset-lg-2 offset-1 col-lg-2">
-                        <p class=" mt-1 ms-lg-4 ms-3 ">Clothes:</p>
+                        <p class=" mt-1 ms-lg-4  ms-3 ">Clothes:</p>
                     </div>
                     <div class="col-5 ps-0">
-                        <input type="number" name="" id="clothesFild"  placeholder="Clothes cost" class="input-fild form-control border-0 rounded">
+                        <input type="number" name="" id="clothesFild" placeholder="Clothes cost"
+                            class="input-fild form-control border-0 rounded ms-lg-0 ms-4">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 offset-4">
+                    <div class="col-5 col-lg-4 offset-4 ">
                         <button id="calculateButton" class="btn text-white bg-color-purple w-100">Calculate</button>
                     </div>
                 </div>
                 <!--=== input fild error ==== -->
-                 <div class="row d-flex justify-content-center">
-                    <p id="displayError" class=" d-none rounded w-75 error-bg-color mt-3 error-text-color"> You may given negative number or string on <span  id="inputName" class=" text-white text-uppercase"></span>.  Please, Give a positive number.</p>
+                <div class="row d-flex justify-content-center">
+                    <p id="displayError" class=" d-none rounded w-75 error-bg-color mt-3 error-text-color">❌String or Negative
+                        number isn't allowed. Please, Give a
+                        positive number in <span id="inputName" class=" text-white text-uppercase">error</span>.</p>
                 </div>
-                 <div class="row d-flex justify-content-center">
-                    <p id="displayErrorTwo" class=" d-none rounded w-75 error-bg-color mt-3 text-white">Your expenses exceed your income.Be careful on your expenses</p>
+                <div class="row d-flex justify-content-center">
+                    <p id="displayErrorTwo" class=" d-none rounded w-75 error-bg-color mt-3 text-white"> ❌Your expenses
+                        exceed your income.Be careful on your expenses</p>
                 </div>
-               <!-- ==== input error end === -->
+                <!-- ==== input error end === -->
                 <div class="row">
                     <h5 class="mt-4 mb-3 text-center">Total Expenses: <span id="totalExpenses">00</span> </h5>
                     <h5 class="mt-2 mb-3 text-center">Balance: <span id="balance">00</span></h5>
@@ -88,7 +93,8 @@
                         <p class="mt-1 ms-lg-4 ms-0 me-1">Save:</p>
                     </div>
                     <div class="col-3 ps-0">
-                        <input type="number" name="" id="saveFild" class="w-100 input-fild form-control border-0 rounded">
+                        <input type="number" name="" id="saveFild"
+                            class="w-100 input-fild form-control border-0 rounded ms-lg-0 ms-3">
                     </div>
                     <div class="col-1">
                         <p class="mt-1">%</p>
@@ -96,6 +102,13 @@
                     <div class="col-4">
                         <button id="saveButton" class=" btn text-white bg-color-purple w-100">Save</button>
                     </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p id="displayErrorThree" class=" d-none rounded w-75 error-bg-color mt-3 text-white"> ❌ String or Negative value isn't allowed. Give a positive number.</p>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <p id="displayErrorFour" class=" d-none rounded w-50 error-bg-color mt-3 text-white text-center">❌
+                        You do not have enough money to save.</p>
                 </div>
                 <div class="row">
                     <h5 class="mt-4 mb-3 text-center">Saving Amount: <span id="savingAmount">00</span> </h5>
