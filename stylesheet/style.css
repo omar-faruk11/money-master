@@ -10,9 +10,16 @@ body{
 .input-fild{
     background-color: #DCDCDC;
 }
+
 .text-color-purple {
     color: rgb(147 51 234);
 }
 .bg-color-purple {
     background: rgb(147 51 234);
+}
+.error-bg-color{
+    background-color: rgb(220 38 38);
+}
+.error-text-color {
+    color: rgba(255, 253, 253, 0.918);
 }
